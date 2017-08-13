@@ -4,7 +4,7 @@
   <xsl:output method="text" indent="no"/>
   <xsl:strip-space elements="div"/>
   <xsl:template match="text()">
-      <xsl:value-of select="replace(., '\s+', ' ')"/>
+    <xsl:value-of select="replace(., '\s+', ' ')"/>
   </xsl:template>
 
   <xsl:template match="/">
@@ -14,12 +14,12 @@
   <xsl:template match="note" />
 
   <xsl:template match="p">
-    <xsl:apply-templates />
+    <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="milestone[@unit='section']">
+  <xsl:template match="milestone[@unit='para']">
     <xsl:apply-templates/>
-    <xsl:text>&#xa;&#xa;</xsl:text>
+    <xsl:text> </xsl:text>
   </xsl:template>
 
 </xsl:stylesheet>
