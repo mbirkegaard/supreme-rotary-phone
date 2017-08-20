@@ -1,0 +1,1 @@
+from document_manager.document_manager import DocumentManager
